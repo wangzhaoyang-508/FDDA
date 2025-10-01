@@ -52,18 +52,16 @@ Please see [documentation](https://detrex.readthedocs.io/en/latest/index.html) f
 - Download the ELES, TTD and MHHS datasets and convert the annotation files into COCO-format annotations.
 
 
-
-  (1) For the Feature Disentangled Pre-traning (FDP):
-
+(1) For the Feature Disentangled Pre-traning (FDP):
   ```
   python tools/fdp.py --config-file projects/fdda/configs/models/dino_fdda.py train.output_dir outputs/fdda_fdp
   ```
 
- (2) For the Domain Prompt Adaptation (DPA):
+(2) For the Domain Prompt Adaptation (DPA):
   ```
   python tools/dpa.py --config-file projects/fdda/configs/models/dino_fdda.py train.init_checkpoint outputs/fdda_fdp/model_final.pth
   ```
- (3) For the Domain Prompt Adaptation (DPA):
+(3) For the Domain Prompt Adaptation (DPA):
   ```
   python tools/dpa.py --config-file projects/fdda/configs/fdda_dino_dpa_12ep.py --eval-only
   ```
